@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'idea'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+    id "com.diffplug.spotless" version "6.7.1"
+}
+
+group 'kg.itacademy'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = JavaVersion.current()
+targetCompatibility = JavaVersion.current()
+
+mainClassName = 'kg.itacademy.drawing.Drawing'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation localGroovy()
+
+    testRuntimeOnly libs.junit.engine
+    testImplementation libs.bundles.junit
+    implementation libs.apache.collections
+}
+
+spotless {
+    java {
+        googleJavaFormat()
+    }
+    groovy {
+        greclipse()
+    }
+}
+
+test {
+    useJUnitPlatform()
+}

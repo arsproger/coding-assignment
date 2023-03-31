@@ -1,0 +1,36 @@
+openapi: 3.0.3
+info:
+  title: IT-Academy coding assignment 
+  description: |-
+    This is a specification for the future REST endpoints. After you fixed all the bugs, please implement 
+    the following specification in this project
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+paths:
+  /command:
+    put:
+      summary: Send a command to the Canvas manager 
+      parameters:
+        - in: query
+          name: command
+          required: true
+          schema:
+            description: command name + parameters separated with spaces   
+            example: b 0 0 X
+            type: string  
+      responses:
+        200:
+          description: Success!
+  /show:
+    get:
+      summary: show the current canvas 
+      responses:
+        '200':
+          description: OK
+          content:
+            application/plain:
+              schema:
+                type: string 
+                example: "----------------------\n|                    |\n|                    |\n|xxxxxxxx            |\n|                    |\n----------------------"
