@@ -26,12 +26,17 @@ public class CanvasManager {
   public CommandResult applyCommand(Command command) {
 
     try {
+      boolean res = true;
       for (Pixel pixel : command.draw(canvas)) {
         if (!canvas.drawPixel(pixel)) {
-          return new PartiallyAppliedResult(command);
+          res = false;
         }
       }
-      return new OkResult(command);
+      if (res) {
+        return new OkResult(command);
+      } else {
+        return new PartiallyAppliedResult(command);
+      }
     } catch (Exception e) {
       return new FailedResult(command, e);
     }

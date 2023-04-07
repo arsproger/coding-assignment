@@ -48,7 +48,6 @@ public class FloodFill4 {
 
                 checkAndPush(new Point(point.getX() - 1, point.getY()));
                 checkAndPush(new Point(point.getX() + 1, point.getY()));
-                checkAndPush(new Point(point.getX() + 1, point.getY() + 1));
                 checkAndPush(new Point(point.getX(), point.getY() + 1));
                 checkAndPush(new Point(point.getX(), point.getY() - 1));
 
