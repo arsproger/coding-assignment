@@ -27,3 +27,5 @@ Then in the folder `build/libs/` you may find an executable file which you could
 ```
 java -jar build/libs/coding-assignment-1.0.0-SNAPSHOT-all.jar
 ```
+
+Postman collection: https://api.postman.com/collections/25575265-215d1d85-9c92-4d45-82f4-0cf72c118752?access_key=PMAT-01GXG8FNSHZ7GQMABT27NTPA2Z
