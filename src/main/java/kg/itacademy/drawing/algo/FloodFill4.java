@@ -20,7 +20,7 @@ public class FloodFill4 {
     Colour startPixelColour;
 
     Optional<Pixel> optionalPixel = canvas.getPixel(startPoint);
-    if (!optionalPixel.isPresent() || optionalPixel.get().getColour().equals(colour)) {
+    if (optionalPixel.isEmpty() || optionalPixel.get().getColour().equals(colour)) {
       return new Shape(Collections::emptyIterator);
     } else {
       startPixelColour = optionalPixel.get().getColour();

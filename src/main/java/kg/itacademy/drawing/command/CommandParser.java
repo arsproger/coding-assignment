@@ -1,11 +1,14 @@
 package kg.itacademy.drawing.command;
 
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 import java.util.Optional;
 import java.util.stream.Stream;
 
+@Component
 public class CommandParser {
 
   public Command parseCommand(String input)

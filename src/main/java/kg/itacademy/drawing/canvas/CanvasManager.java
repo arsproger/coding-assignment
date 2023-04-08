@@ -1,15 +1,18 @@
 package kg.itacademy.drawing.canvas;
 
-import java.io.IOException;
-import java.io.Writer;
 import kg.itacademy.drawing.command.Command;
 import kg.itacademy.drawing.command.result.CommandResult;
 import kg.itacademy.drawing.command.result.FailedResult;
 import kg.itacademy.drawing.command.result.OkResult;
 import kg.itacademy.drawing.command.result.PartiallyAppliedResult;
 import kg.itacademy.drawing.primitive.Pixel;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.io.Writer;
 
 /** Manager to rule canvas, apply some commands on it and show on display the results */
+@Component
 public class CanvasManager {
 
   private final Canvas canvas;

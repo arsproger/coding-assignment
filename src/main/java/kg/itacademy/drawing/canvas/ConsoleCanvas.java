@@ -1,13 +1,16 @@
 package kg.itacademy.drawing.canvas;
 
-import java.io.IOException;
-import java.io.Writer;
-import java.util.Optional;
 import kg.itacademy.drawing.primitive.Colour;
 import kg.itacademy.drawing.primitive.Pixel;
 import kg.itacademy.drawing.primitive.Point;
+import org.springframework.stereotype.Component;
+
+import java.io.IOException;
+import java.io.Writer;
+import java.util.Optional;
 
 /** Ascii canvas implementation. */
+@Component
 public class ConsoleCanvas implements Canvas {
 
   public static final char SIDE_BORDER_CHAR = '|';

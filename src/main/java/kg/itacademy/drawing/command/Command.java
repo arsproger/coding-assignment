@@ -2,8 +2,10 @@ package kg.itacademy.drawing.command;
 
 import kg.itacademy.drawing.canvas.Canvas;
 import kg.itacademy.drawing.primitive.Shape;
+import org.springframework.stereotype.Component;
 
 /** Common interface for various of commands */
+@Component
 public interface Command {
 
   /**
